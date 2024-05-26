@@ -2,18 +2,19 @@ package com.example.contry_servies_controll_beans.servies;
 
 import com.example.contry_servies_controll_beans.beans.Country;
 import com.example.contry_servies_controll_beans.controller.Addrespons;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+@Component
 public class contryServices {
     static HashMap<Integer, Country> countryIDMap;
 
     public contryServices() {
         countryIDMap = new HashMap<Integer, Country>();
         Country bdCountry=new Country(1,"BD","Dhaka");
-        Country usaCountry=new Country(1,"USA","washington");
+        Country usaCountry=new Country(13,"USA","washington");
         Country ukCountry=new Country(3,"UK","London");
         countryIDMap.put(1, bdCountry);
         countryIDMap.put(2, usaCountry);
